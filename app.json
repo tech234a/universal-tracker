@@ -1,0 +1,20 @@
+{
+  "name": "Universal Tracker (Unofficial/Experimental Deployment Method)",
+  "description": "Deploy the Universal Tracker used by Archive Team. You can learn more about the Archive Team Tracker at https://wiki.archiveteam.org/index.php?title=Dev/Tracker. Note that as of 2021, Archive Team supplements the Universal Tracker user interface with trackerproxy (https://gitea.arpa.li/ArchiveTeam/trackerproxy), but Universal Tracker also remains functional on its own (as provided here).",
+  "website": "https://wiki.archiveteam.org/index.php?title=Dev/Tracker",
+  "success_url": "/global-admin/users",
+  "keywords": ["archiving", "preservation", "web archiving", "archive", "Archive Team", "community", "project", "script", "run", "collaborative effort", "volunteer", "team", "leaderboard", "leader", "distributed", "HTTP", "HTTPS", "save", "websites", "communities"],
+  "logo": "https://wiki.archiveteam.org/images/f/f3/Archive_team.png",
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "stack": "heroku-20",
+  "env": {
+          "redis_host": {"description": "An external Redis server must be provided in order for the tracker to function. A free 30MB Redis instance without disk persistence is available at https://redislabs.com/try-free/. If deploying in the US Heroku region, choose AWS us-east-1 for the Redis instance. If deploying in the EU Heroku region, choose AWS eu-west-1 for the Redis instance."},
+          "redis_port": {},
+          "redis_password": {"required": false}
+  }
+}
