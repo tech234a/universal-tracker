@@ -86,7 +86,9 @@ One instance can manage trackers for multiple projects. In the Redis database, t
 Heroku
 ------
 
-Can run on Heroku, with a Redis server somewhere.
+Can run on Heroku, with a Redis server somewhere. A free 30MB Redis instance without disk persistence is available at https://redislabs.com/try-free/. If deploying in the US Heroku region, choose AWS us-east-1 for the Redis instance. If deploying in the EU Heroku region, choose AWS eu-west-1 for the Redis instance.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 HTTP API
 ========
